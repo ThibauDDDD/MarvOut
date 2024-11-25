@@ -66,6 +66,8 @@ async def define(interaction: discord.Interaction, channel: discord.TextChannel,
         if (check_error[0] == 401):
             print(check_error[1])
             await interaction.response.send_message(f"votre token github n'est pas correct, veuillez réessayer s'il vous plaît")
+        elif (check_error[0] == 403):
+            await interaction.response.send_message(f"Vous n'avez pas les droits d'accès à l'api de ce repository")
         elif (check_error[0] == 404):
             await interaction.response.send_message(f"le nom du du repository et / ou du propriétaire du repository n'est pas correct, veuillez réessayer s'il vous plaît")
         else:
