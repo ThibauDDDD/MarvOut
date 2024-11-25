@@ -122,7 +122,7 @@ async def on_guild_join(guild:discord.Guild):
 
 def main():
     load_dotenv(dotenv_path=".env") #permet de récupérer le token 
-    #keep_alive()
+    keep_alive()
     bot.run(os.getenv("TOKEN"))
 
 if __name__ == "__main__":
