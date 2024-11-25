@@ -9,7 +9,7 @@ def home():
     return ("Le bot est en ligne!")
 
 def run():
-    app.run(host="0.0.0.0", port=(5000))
+    app.run(host="0.0.0.0", port=(10000))
 
 def keep_alive():
     t = Thread(target=run)
